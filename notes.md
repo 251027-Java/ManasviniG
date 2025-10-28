@@ -4,6 +4,7 @@
 - .  - relative path that starts at current directory
 	- .. - previous directory
 
+## Commands
 - pwd - Print working directory
 - cd - change directory
 - mkdir - make directory
@@ -24,7 +25,9 @@
 
 ## Git
 - git init - create repository
-- git add - stage changes
+- git add <filename> - stage changes
 	- rm cached - remove staged file
 - git commit
-	- -m "" - to commit message
+	- -m "(message)" - to commit message
+- git status - displays status of repo to terminal
+- git log - displays commit history
