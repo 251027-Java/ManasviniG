@@ -18,3 +18,13 @@
 - nano - open nano editor
 	- ^ is ctrl
 - vim - open vim editor
+
+## Path Variable
+- Every available path that can be accessed
+
+## Git
+- git init - create repository
+- git add - stage changes
+	- rm cached - remove staged file
+- git commit
+	- -m "" - to commit message
