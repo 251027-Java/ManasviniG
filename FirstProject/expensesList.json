@@ -1,0 +1,5 @@
+[
+	{"id":"1", "date":"Mon Nov 03 15:50:10 CST 2025", "value":"99.95", "merchant":"Walmart"},
+	{"id":"2", "date":"Mon Nov 03 15:50:10 CST 2025", "value":"100.01", "merchant":"Costco"},
+	{"id":"3", "date":"Mon Nov 03 15:50:10 CST 2025", "value":"3000000.0", "merchant":"Private Island"}
+]
