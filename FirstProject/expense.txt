@@ -1,4 +1,1 @@
-Id, Date, Value, Merchant
-Expense [id= 11, Date=Mon Nov 03 16:39:22 CST 2025, value=99.95, merchant=Walmart]
-Expense [id= 12, Date=Mon Nov 03 16:39:22 CST 2025, value=100.01, merchant=Costco]
-Expense [id= 13, Date=Mon Nov 03 16:39:22 CST 2025, value=3000000.0, merchant=Private Island]
+[Expense [id=9, date=Tue Nov 04 11:40:16 CST 2025, value=99.95, merchant=Walmart],Expense [id=12, date=Tue Nov 04 11:40:16 CST 2025, value=100.01, merchant=Costco],Expense [id=13, date=Tue Nov 04 11:40:16 CST 2025, value=3000000.0, merchant=Private Island]]

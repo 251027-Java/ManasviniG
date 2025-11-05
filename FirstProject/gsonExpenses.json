@@ -1,20 +1,14 @@
 [
   {
-    "id": 11,
-    "date": "Nov 3, 2025, 4:39:22 PM",
-    "value": 99.95,
-    "merchant": "Walmart"
+    "id": 6,
+    "date": "Nov 4, 2025, 4:40:35 PM",
+    "value": 99.0,
+    "merchant": "Dummy"
   },
   {
-    "id": 12,
-    "date": "Nov 3, 2025, 4:39:22 PM",
-    "value": 100.01,
-    "merchant": "Costco"
-  },
-  {
-    "id": 13,
-    "date": "Nov 3, 2025, 4:39:22 PM",
-    "value": 3000000.0,
-    "merchant": "Private Island"
+    "id": 7,
+    "date": "Nov 4, 2025, 4:40:35 PM",
+    "value": 59.0,
+    "merchant": "Dummy"
   }
 ]

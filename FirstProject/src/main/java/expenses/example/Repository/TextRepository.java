@@ -2,33 +2,62 @@ package expenses.example.Repository;
 
 import expenses.example.Expense;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.io.IOException;
 
 public class TextRepository implements IRepository {
     // Fields
-    private String filename = "expense.txt";
+    private String filename = "FirstProject\\expense.txt";
 
     // Constructors
     public TextRepository() {}
 
+    public TextRepository(String filename) {
+        this.filename = filename;
+    }
+
     // Methods
+    public List<Expense> loadExpenses() {
+        List<Expense> expenses = new ArrayList<>();
+        String lines = "";
+        try {
+            FileReader reader = new FileReader(filename);
+            lines = reader.readAllAsString();
+
+            for (String line : lines.split("],")) {
+                line = line.replace("]]", "");
+                String[] element = line.split(", |=");
+
+                int id = Integer.parseInt(element[1]);
+                Date date = new Date(element[3]);
+                double value = Double.parseDouble(element[5]);
+                String merchant = element[7];
+
+                expenses.add(new Expense(id, date, value, merchant));
+            }
+
+        } catch(IOException e) {
+            IO.println(e);
+        }
+        return expenses;
+    }
+
     public void saveExpenses(List<Expense> expenses) {
         try {
-            FileWriter file = new FileWriter(filename);
+            FileWriter file = new FileWriter(filename, false);
             PrintWriter writer = new PrintWriter(file, true);
 
-            writer.println("Id, Date, Value, Merchant");
-            for (Expense expense : expenses) {
-                writer.println(expense);
+            writer.print("[");
+            for (int i = 0; i < expenses.size() - 1; i++) {
+                writer.print(expenses.get(i) + ",");
             }
-            file.close();
-            IO.println("Text file has been written in!");
+            writer.print(expenses.getLast() + "]");
 
-        } catch (IOException e) {
-            IO.println(e);
+            file.close();
+        } catch (Exception e){
+            System.out.println("Error writing file.");
         }
     }
 }

@@ -1,5 +1,4 @@
-[
-	{"id":"11", "date":"Mon Nov 03 16:39:22 CST 2025", "value":"99.95", "merchant":"Walmart"},
-	{"id":"12", "date":"Mon Nov 03 16:39:22 CST 2025", "value":"100.01", "merchant":"Costco"},
-	{"id":"13", "date":"Mon Nov 03 16:39:22 CST 2025", "value":"3000000.0", "merchant":"Private Island"}
-]
+id, date, value, merchant
+9, Tue Nov 04 11:40:16 CST 2025, 99.95, Walmart
+12, Tue Nov 04 11:40:16 CST 2025, 100.01, Costco
+13, Tue Nov 04 11:40:16 CST 2025, 3000000.0, Private Island
