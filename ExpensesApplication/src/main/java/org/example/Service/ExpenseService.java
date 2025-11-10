@@ -17,9 +17,10 @@ public class ExpenseService {
 
     // Methods
     public Expense createNewExpense(int id, Date date, double value, String merchant){
-        if (repo.readExpense(id) != null){
+        if (repo.readExpense(id) != null) {
             return null;
         }
+
         Expense newExpense = new Expense(id, new Date(), value, merchant);
         repo.createExpense(newExpense);
         return newExpense;

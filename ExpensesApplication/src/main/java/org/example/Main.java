@@ -4,8 +4,10 @@ import org.example.Repository.IRepository;
 import org.example.Repository.CSVRepository;
 import org.example.Repository.JSONRepository;
 import org.example.Repository.TextRepository;
+import  org.example.Repository.H2Repository;
 import org.example.Service.ExpenseService;
 
+import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -23,7 +25,7 @@ public class Main {
         // THIS is where we switch our repository from one to another
 //        IRepository repo = new TextRepository();
 //        IRepository repo = new CSVRepository();
-        IRepository repo = new JSONRepository();
+        IRepository repo = new H2Repository();
 
 //        System.out.println("Creating a test expense:");
 //        expenses.add(new Expense(1, new Date(), 99.95, "Walmart"));
@@ -36,8 +38,11 @@ public class Main {
 //        System.out.println(expenses);
 
         ExpenseService service = new ExpenseService(repo);
-        service.sumExpenses();
-        service.printExpenses();
+        service.createNewExpense(2, new Date(), 50.00, "Walmart");
+        IO.println(service.getExpense(2));
+
+        //service.sumExpenses();
+        //service.printExpenses();
 
         System.out.println("Expense Tracker Closing...");
     }
