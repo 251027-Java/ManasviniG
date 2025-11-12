@@ -1,10 +1,6 @@
 package org.example;
 
-import org.example.Repository.IRepository;
-import org.example.Repository.CSVRepository;
-import org.example.Repository.JSONRepository;
-import org.example.Repository.TextRepository;
-import  org.example.Repository.H2Repository;
+import org.example.Repository.*;
 import org.example.Service.ExpenseService;
 
 import java.util.Date;
@@ -25,7 +21,7 @@ public class Main {
         // THIS is where we switch our repository from one to another
 //        IRepository repo = new TextRepository();
 //        IRepository repo = new CSVRepository();
-        IRepository repo = new H2Repository();
+        IRepository repo = new MongoRepository();
 
 //        System.out.println("Creating a test expense:");
 //        expenses.add(new Expense(1, new Date(), 99.95, "Walmart"));
